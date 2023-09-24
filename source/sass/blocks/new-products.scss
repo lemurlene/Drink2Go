@@ -1,13 +1,12 @@
 .new-products__list {
   display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  text-align: center;
 }
 
 .new-products__item {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .new-products__item--1 {
@@ -26,13 +25,41 @@
   font-size: 36px;
   font-weight: bold;
   line-height: 48px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.02em;
   &::before {
     content: "Новинка!";
-    display: flex;
+    display: block;
     font-size: 12px;
     line-height: 16px;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.04em;
     color: $lavender_500;
+    text-transform: uppercase;
   }
+}
+
+.new-products__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 230px;
+}
+
+.new-products__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: $lavender_500;
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+
+.new-products__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-right: 20px;
+}
+
+.new-products__old-price::after,
+.new-products__price::after {
+  content: "\20BD";
 }

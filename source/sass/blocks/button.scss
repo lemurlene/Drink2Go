@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  color: $white;
+  background-color: $lavender_500;
+  cursor: pointer;
+  word-break: break-word;
+  min-height: 40px;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+}
+
+.button:hover {
+  background-color: $lavender_300;
+}
+
+.button:active {
+  background-color: $lavender_600;
+
+  .button__text {
+    opacity: 0.3;
+  }
+}
+
+.button:disabled {
+  background-color: $grey_500;
+}

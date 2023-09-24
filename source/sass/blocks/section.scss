@@ -1,0 +1,49 @@
+.section {
+  padding: 20px;
+
+  @media (min-width: $laptop-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+  }
+}
+
+.section__h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+  margin: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin: 40px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 80px;
+  }
+
+  &::before {
+    content: attr(data-heading-name);
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: $lavender_500;
+    text-transform: uppercase;
+  }
+}
+
+.section__h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+}
