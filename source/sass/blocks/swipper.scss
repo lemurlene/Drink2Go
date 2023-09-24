@@ -1,29 +1,25 @@
 .swiper {
   display: flex;
-  position: relative;
-  overflow: hidden;
+  max-width: 100vw;
   width: 100%;
-  max-width: $phone-width;
   height: 656px;
-
-  @media (min-width: $phablet-width) {
-    max-width: $tablet-width;
-  }
+  margin: 0;
 
   @media (min-width: $tablet-width) {
-    max-width: $laptop-width;
     height: 828px;
   }
 
   @media (min-width: $laptop-width) {
-    max-width: $desktop-width;
     height: 714px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
   }
 }
 
 .swiper-slide {
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
 }
