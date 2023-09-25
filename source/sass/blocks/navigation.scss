@@ -1,0 +1,26 @@
+.navigation__list {
+  background-color: pink;
+}
+
+.navigation__link {
+  color: $grey_900;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.navigation__item--footer:hover,
+.navigation__item--footer:focus {
+  .navigation__link {
+    color: $lavender_300;
+  }
+}
+
+.navigation__item--footer:active {
+  .navigation__link {
+    color: $lavender_600;
+  }
+}
+
