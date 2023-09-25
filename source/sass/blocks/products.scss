@@ -1,0 +1,25 @@
+.products__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.products__link {
+color: inherit;
+}
+
+.products__buy {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  min-width: 240px;
+}
+
+.products__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  &::after {
+    content: "\20BD";
+  }
+}
+

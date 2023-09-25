@@ -18,19 +18,17 @@
   </head>
   <body class="page__body">
     <div class="page__wrapper">
-      <header class="header">
-        <a class="page-header__logo page-header__logo--disabled" href="" aria-current="page">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo/logo-desktop.svg" width="187" height="96">
-            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg" width="102" height="84">
-            <img class="page-header__logo-img" src="img/logo/logo-mobile.svg" width="102" height="84" alt="Логотип сайта">
-          </picture>
+      <header class="header section">
+        <a class="logo page-header__logo page-header__logo--disabled" href="" aria-current="page">
+          <svg class="page-header__logo-img" width="32" height="36" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#youtube"></use>
+          </svg>
         </a>
-        <nav class="page-header__nav main-nav">
+        <nav class="navigation page-header__nav main-nav">
           <button class="main-nav__toggle" type="button" aria-expanded="true" aria-controls="main-nav__list">
             <span class="visually-hidden main-nav__toggle-label">Открыть меню</span>
           </button>
-          <ul class="list main-nav__list" id="main-nav__list">
+          <ul class="list navigation__list main-nav__list" id="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
               <a class="navigation__link main-nav__link main-nav__link--current" href="" aria-current="page">Главная</a>
             </li>
@@ -45,13 +43,13 @@
             </li>
           </ul>
         </nav>
-        <nav class="page-header__nav user-nav">
-          <ul class="list main-nav__list" id="main-nav__list">
+        <nav class="navigation page-header__nav user-nav">
+          <ul class="list navigation__list main-nav__list" id="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link main-nav__link--current">Войти</a>
+              <a class="navigation__link main-nav__link main-nav__link--current">Войти</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Корзина</a>
+              <a class="navigation__link main-nav__link" href="form.html">Корзина</a>
             </li>
           </ul>
         </nav>
@@ -68,7 +66,7 @@
                 <div class="new-products__buy">
                   <div class="new-products__old-price">295</div>
                   <div class="new-products__price">225</div>
-                  <button class="button new-products__batton">Заказать</button>
+                  <button class="button new-products__button">Заказать</button>
                 </div>
               </li>
               <li class="swiper-slide new-products__item new-products__item--2" id="slide-2">
@@ -77,7 +75,7 @@
                 <div class="new-products__buy">
                   <div class="new-products__old-price">285</div>
                   <div class="new-products__price">265</div>
-                  <button class="button new-products__batton">Заказать</button>
+                  <button class="button new-products__button">Заказать</button>
                 </div>
               </li>
               <li class="swiper-slide new-products__item new-products__item--3" id="slide-3">
@@ -86,18 +84,14 @@
                 <div class="new-products__buy">
                   <div class="new-products__old-price">395</div>
                   <div class="new-products__price">275</div>
-                  <button class="button new-products__batton">Заказать</button>
+                  <button class="button new-products__button">Заказать</button>
                 </div>
               </li>
             </ul>
-
             <div class="swiper-pagination"></div>
-
             <div class="swiper-button swiper-button-prev"></div>
             <div class="swiper-button swiper-button-next"></div>
-
           </div>
-
         </section>
         <section class="section advantages">
           <h2 class="section__h2" data-heading-name="Преимущества">Главные причины выбрать Drink2Go</h2>
@@ -174,50 +168,50 @@
             </form>
           </section>
           <section class="sorting">
-            <h3 class="caption">Сортировка заголовок:</h3>
-              <!--Стилизация select остаётся на усмотрение студента, можно оставить стандартную стилизацию браузера.-->
-            <form class="sorting-products">
-              <label class="caption-text sorting-products__label" for="sorting-products">Сортировка лейбл:</label>
+            <h3 class="visually-hidden">Сортировка</h3>
+              <!--Стилизация select остаётся на усмотрение студента,
+                можно оставить стандартную стилизацию браузера.-->
+            <form class="sorting-products fieldset">
+              <label class="fieldset__title" for="sorting-products">Сортировка:</label>
               <select name="sorting-products" id="sorting-products">
-                <option class="sorting-products__option" value="">По умолчанию</option>
-                <option class="sorting-products__option" value="petersburg">Сначала дорогие</option>
-                <option class="sorting-products__option" value="samara">Сначала дешёвые</option>
-                <option class="sorting-products__option" value="perm">Высокий рейтинг</option>
+                <option class="sorting-products__option" value="default" checked="checked">По умолчанию</option>
+                <option class="sorting-products__option" value="expensive-first">Сначала дорогие</option>
+                <option class="sorting-products__option" value="cheap-first">Сначала дешёвые</option>
+                <option class="sorting-products__option" value="high-rating">Высокий рейтинг</option>
               </select>
             </form>
           </section>
           <section class="products">
-          <!--Изображение и название товара в каталоге — ссылки на страницу с описанием товара.
-          Страницу с описанием товара реализовывать не нужно.-->
            <h3 class="visually-hidden">Товары</h3>
-            <ul class="list products-list">
-              <li class="products-list-item">
-                <div class="description-sample">
-                  <a href="#">
-                    <img src="" width="" height="" alt="">
-                    <h3><a href="#" class="caption-text caption-sample">Декаф Флэт Уайт</a></h3>
-                  </a>
-                  <p>Кофе без кофеина из Эфиопии
-                    с натуральным фермерским молоком</p>
-                    <div class="new-products__buy">
-                      <div class="new-products__price">225</div>
-                      <button class="button new-products__batton">В корзину</button>
-                    </div>
-                  </div>
+            <ul class="list products__list section">
+              <li class="products__item">
+                <!-- box-shadow: 0 5px 15px rgba($black, 0.15);-->
+                <a class="products__link section__h3" href="blank.html" target="_blank">
+                  <img src="" width="" height="" alt="">
+                  Декаф Флэт Уайт
+                </a>
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                <div class="products__buy">
+                  <div class="products__price">225</div>
+                  <button class="button products__button">В корзину</button>
+                </div>
               </li>
             </ul>
-            <ul class="pagination">
-              <li class="pagination-item">
-                <a class="button button-grey pagination-current">1</a>
+            <ul class="list pagination">
+              <li class="pagination__item">
+                <a href="#" class="button button-grey">Назад</a>
               </li>
-              <li class="pagination-item">
+              <li class="pagination__item">
+                <a class="button button-grey pagination__current">1</a>
+              </li>
+              <li class="pagination__item">
                 <a href="#" class="button button-grey">2</a>
               </li>
-              <li class="pagination-item">
+              <li class="pagination__item">
                 <a href="#" class="button button-grey">3</a>
               </li>
-              <li class="pagination-item">
-                <a href="#" class="button button-grey">Следующая</a>
+              <li class="pagination__item">
+                <a href="#" class="button button-grey">Вперёд</a>
               </li>
             </ul>
           </section>
@@ -226,35 +220,36 @@
           <h2 class="visually-hidden">Карта</h2>
         </section>
       </main>
-      <footer class="page-footer page__inner">
-        <section class="section">
-          <h4 class="visually-hidden">Ссылки</h4>
-          <p class="page-footer__hashtag">Логотип</p>
-          <ul class="social page-footer__social">
-            <li class="social__item">
-              <a class="social__link" href="https://www.twitter.com" aria-label="Вконтакте">
-                <svg class="social__icon" width="18" height="15" aria-hidden="true" role="img">
-                  <use xlink:href="img/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://ru.pinterest.com/" aria-label="Пинтерест">
-                <svg class="social__icon" width="9" height="19" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.youtube.com/@HTMLAcademyRUS" aria-label="Одноклассники">
-                <svg class="social__icon" width="20" height="14" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#youtube"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="section navigation">
+      <footer class="page-footer section">
+        <a class="logo logo--footer logo--disabled" href="" aria-current="page">
+          <svg class="" width="32" height="36" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#youtube"></use>
+          </svg>
+        </a>
+        <ul class="social page-footer__social">
+          <li class="social__item">
+            <a class="social__link" href="https://www.twitter.com" aria-label="Вконтакте">
+              <svg class="social__icon" width="18" height="15" aria-hidden="true" role="img">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://ru.pinterest.com/" aria-label="Пинтерест">
+              <svg class="social__icon" width="9" height="19" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/@HTMLAcademyRUS" aria-label="Одноклассники">
+              <svg class="social__icon" width="20" height="14" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <nav class="navigation">
           <h4 class="section__h4">Интернет магазин</h4>
           <ul class="list navigation__list">
             <li class="navigation__item--footer">
@@ -270,8 +265,8 @@
               <a class="navigation__link" href="blank.html">О нас</a>
             </li>
           </ul>
-        </section>
-        <section class="section navigation">
+        </nav>
+        <nav class="navigation">
           <h4 class="section__h4">Медиа</h4>
           <ul class="list navigation__list">
             <li class="navigation__item--footer">
@@ -284,8 +279,8 @@
               <a class="navigation__link" href="blank.html">Правовая информация</a>
             </li>
           </ul>
-        </section>
-        <section class="section contacts">
+        </nav>
+        <div class="contacts">
           <h4 class="section__h4">Контакты</h4>
           <ul class="list">
             <li class="contacts__address" >
@@ -295,7 +290,7 @@
               <a href="tel:+79999999999">+7 (999) 999-99-99</a>
             </li>
           </ul>
-        </section>
+        </div>
         <p class="page-footer__copyright copyright">Разработано в
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
