@@ -26,6 +26,10 @@
 
 .swiper-button {
   width: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
 }
 
 .swiper-button-prev {

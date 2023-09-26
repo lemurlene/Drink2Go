@@ -11,3 +11,12 @@
     display: none;
   }
 }
+
+.hide-show__show-since-laptop {
+  display: none;
+
+  @media (min-width: $laptop-width) {
+    display: block;
+  }
+}
+

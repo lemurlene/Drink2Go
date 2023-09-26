@@ -58,7 +58,7 @@
         <h1 class="visually-hidden">Drink2Go: интернет-магазин по продаже кофейных напитков</h1>
         <section class="new-products">
           <h2 class="visually-hidden">Новинки</h2>
-          <div class="swiper">
+          <div class="swiper hide-show">
             <ul class="list swiper-wrapper new-products__list">
               <li class="swiper-slide new-products__item new-products__item--1" id="slide-1">
                 <h3 class="new-products__caption">Декаф Флэт Уайт</h3>
@@ -85,12 +85,14 @@
                 </picture>
               </li>
               <li class="swiper-slide new-products__item new-products__item--2" id="slide-2">
-                <h3 class="new-products__caption">Лавандовый Латте</h3>
-                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
-                <div class="new-products__buy">
-                  <div class="new-products__old-price">285</div>
-                  <div class="new-products__price">265</div>
-                  <button class="button new-products__button">Заказать</button>
+                <div class="new-products__text">
+                  <h3 class="new-products__caption">Лавандовый Латте</h3>
+                  Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+                  <div class="new-products__buy">
+                    <div class="new-products__old-price">285</div>
+                    <div class="new-products__price">265</div>
+                    <button class="button new-products__button">Заказать</button>
+                  </div>
                 </div>
                 <picture class="new-products__picture">
                   <source type="image/webp" media="(min-width: 900px)"
@@ -133,7 +135,7 @@
                 </picture>
               </li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination hide-show__show-since-laptop"></div>
             <div class="swiper-button swiper-button-prev"></div>
             <div class="swiper-button swiper-button-next"></div>
           </div>
