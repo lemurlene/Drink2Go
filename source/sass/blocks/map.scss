@@ -1,15 +1,35 @@
 .map {
   height: 420px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--mobile@2x.jpg");
+  }
 
   @media (min-width: $phablet-width) {
     height: 450px;
   }
+
   @media (min-width: $tablet-width) {
     height: 480px;
+    background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--tablet@2x.jpg");
+    }
   }
+
   @media (min-width: $laptop-width) {
     height: 510px;
+    background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--laptop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--laptop@2x.jpg");
+    }
   }
+
   @media (min-width: $desktop-width) {
     height: 540px;
   }
