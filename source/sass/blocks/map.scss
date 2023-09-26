@@ -1,4 +1,6 @@
 .map {
+  height: 420px;
+
   @media (min-width: $phablet-width) {
     height: 450px;
   }

@@ -1,19 +1,5 @@
-.sorting-products option {
+.sorting-products option{
   background-color:$white;
   text-transform: lowercase;
-}
-
-.sorting-products option::first-of-type {
   color: $lavender_500;
 }
-
-
-.sorting-products option:checked {
-  color: $lavender_500;
-}
-
-.sorting-products option:hover {
-  background-color: $lavender_100;
-}
-
-

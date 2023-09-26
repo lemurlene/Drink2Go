@@ -8,7 +8,7 @@
     <title>Drink2Go</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
@@ -33,7 +33,7 @@
               <a class="navigation__link main-nav__link main-nav__link--current" href="" aria-current="page">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="navigation__link main-nav__link" href="gallery.html">Каталог</a>
+              <a class="navigation__link main-nav__link" href="#catalog">Каталог</a>
             </li>
             <li class="main-nav__item">
               <a class="navigation__link main-nav__link" href="blank.html">Доставка</a>
@@ -44,7 +44,7 @@
           </ul>
         </nav>
         <nav class="navigation page-header__nav user-nav">
-          <ul class="list navigation__list main-nav__list" id="main-nav__list">
+          <ul class="list navigation__list user-nav__list" id="user-nav__list">
             <li class="main-nav__item main-nav__item--current">
               <a class="navigation__link main-nav__link main-nav__link--current">Войти</a>
             </li>
@@ -129,42 +129,48 @@
                     <div class="toggle toggle-min" tabindex="0"></div>
                     <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
-                  <div class="price-controls">
+                  <div class="price-controls hide-show">
                     <label for="min-price" class="min-price">
                       от <input type="number" name="min-price" id="min-price" placeholder="0" value="0">
                     </label>
-                    <label for="max-price" class="max-price">
-                      до <input type="number" name="max-price" id="max-price" placeholder="123" value="123">
+                    <label class="hide-show__hide-since-tablet" for="max-price--1" class="max-price">
+                      до <input type="number" name="max-price--1" id="max-price--1" placeholder="123" value="123">
+                    </label>
+                    <label class="hide-show__show-since-tablet" for="max-price--2" class="max-price">
+                      до <input type="number" name="max-price--2" id="max-price--2" placeholder="900" value="900">
+                      <!--Уточнить у дизайнера: на мобильном должно быть "123"?
+                        Если нет, удалить max-price--1 и max-price--2 использовать код ниже:
+                         <input type="number" name="max-price" id="max-price" placeholder="900" value="900">-->
                     </label>
                   </div>
                 </div>
               </fieldset>
               <fieldset class="filter-item">
                 <legend class="caption-text">Наличие молока</legend>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="adaptive" checked value="Неважно">
-                <label for="adaptive">Неважно</label>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="fixed" disabled value="Только животное">
-                <label for="fixed">Только животное</label>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="rubber" value="Только растительное">
-                <label for="rubber">Только растительное</label>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="rubber" value="Без молока">
-                <label for="rubber">Без молока</label>
+                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="not-important" checked value="Неважно">
+                <label for="not-important">Неважно</label>
+                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="animal" disabled value="Только животное">
+                <label for="animal">Только животное</label>
+                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="vegetable" value="Только растительное">
+                <label for="vegetable">Только растительное</label>
+                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="no-milk" value="Без молока">
+                <label for="no-milk">Без молока</label>
               </fieldset>
               <fieldset class="filter-item">
                 <legend class="caption-text">Страна произрастания</legend>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="filters-form-area-value-1" checked value="Бразилия">
-                <label for="filters-form-area-value-1">Бразилия</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="filters-form-area-value-2" disabled value="Эфиопия">
-                <label for="filters-form-area-value-2">Эфиопия</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="filters-form-area-value-3" checked value="Колумбия">
-                <label for="filters-form-area-value-3">Колумбия</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="filters-form-area-value-4" value="Коста-Рика">
-                <label for="filters-form-area-value-4">Коста-Рика</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="filters-form-area-value-5" value="Перу">
-                <label for="filters-form-area-value-5">Перу</label>
+                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Brazil" checked value="Бразилия">
+                <label for="Brazil">Бразилия</label>
+                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Ethiopia" disabled value="Эфиопия">
+                <label for="Ethiopia">Эфиопия</label>
+                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Colombia" checked value="Колумбия">
+                <label for="Colombia">Колумбия</label>
+                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Costa-Rica" value="Коста-Рика">
+                <label for="Costa-Rica">Коста-Рика</label>
+                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Peru" value="Перу">
+                <label for="Peru">Перу</label>
               </fieldset>
-              <button type="submit" class="button button-grey">Применить</button>
-              <button type="reset" class="button button-grey">Сбросить</button>
+              <button type="submit" class="button">Применить</button>
+              <button type="reset" class="button">Сбросить</button>
             </form>
           </section>
           <section class="sorting">
@@ -174,7 +180,7 @@
             <form class="sorting-products fieldset">
               <label class="fieldset__title" for="sorting-products">Сортировка:</label>
               <select name="sorting-products" id="sorting-products">
-                <option class="sorting-products__option" value="default" checked="checked">По умолчанию</option>
+                <option class="sorting-products__option" value="default" selected>По умолчанию</option>
                 <option class="sorting-products__option" value="expensive-first">Сначала дорогие</option>
                 <option class="sorting-products__option" value="cheap-first">Сначала дешёвые</option>
                 <option class="sorting-products__option" value="high-rating">Высокий рейтинг</option>
@@ -198,7 +204,7 @@
             </ul>
             <ul class="list pagination hide-show">
               <li class="pagination__item">
-                <a href="#" class="pagination__link pagination__link--prev button"><span class="hide-show__hide-landscape">Назад</span></a>
+                <a href="#" class="pagination__link pagination__link--prev button"><span class="hide-show__show-since-tablet">Назад</span></a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link button pagination__link--current">1</a>
@@ -210,12 +216,12 @@
                 <a href="#" class="pagination__link button">3</a>
               </li>
               <li class="pagination__item">
-                <a href="#" class="pagination__link pagination__link--next button"><span class="hide-show__hide-landscape">Вперёд</span></a>
+                <a href="#" class="pagination__link pagination__link--next button"><span class="hide-show__show-since-tablet">Вперёд</span></a>
               </li>
             </ul>
           </section>
         </section>
-        <section class="map" id="map" height="420">
+        <section class="map" id="map">
           <h2 class="visually-hidden">Карта</h2>
         </section>
       </main>
