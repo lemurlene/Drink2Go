@@ -1,0 +1,17 @@
+@media (max-width: $landscape-width) {
+  .hide-show__hide-landscape {
+    display: none;
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .hide-show__hide-laptop {
+    display: none;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .hide-show__hide-desktop {
+    display: none;
+  }
+}

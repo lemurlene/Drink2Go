@@ -9,18 +9,17 @@
   line-height: 18px;
 }
 
-.pagination__item .button-grey {
+.pagination__link {
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.pagination__item:first-child a,
-.pagination__item:last-child a  {
+.pagination__link--prev,
+.pagination__link--next  {
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.pagination__item .pagination-current  {
-  padding: 14px 18px 12px 17px;
+.pagination__link--current {
   pointer-events: none;
 }
