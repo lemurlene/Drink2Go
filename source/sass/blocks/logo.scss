@@ -8,7 +8,7 @@
   color: $grey_900;
 }
 
-.logo:before {
+.logo::before {
   @media (min-width: $tablet-width) {
     content: "D";
   }
@@ -27,7 +27,8 @@
     content: "Go";
   }
 }
-.logo--footer:before {
+
+.logo--footer::before {
   content: "D";
 
   @media (min-width: $tablet-width) {

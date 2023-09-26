@@ -68,6 +68,21 @@
                   <div class="new-products__price">225</div>
                   <button class="button new-products__button">Заказать</button>
                 </div>
+                <picture class="new-products__picture">
+                  <source type="image/webp" media="(min-width: 900px)"
+                    srcset="img/content/decaf-flat--laptop.webp 1x, img/content/decaf-flat--laptop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 500px)"
+                    srcset="img/content/decaf-flat--tablet.webp 1x, img/content/decaf-flat--tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/decaf-flat--phone.webp 1x, img/content/decaf-flat--phone@2x.webp 2x">
+
+                  <source media="(min-width: 900px)"
+                    srcset="img/content/decaf-flat--laptop.png 1x, img/content/decaf-flat--laptop@2x.png 2x">
+                  <source media="(min-width: 500px)"
+                    srcset="img/content/decaf-flat--tablet.png 1x, img/content/decaf-flat--tablet@2x.png 2x">
+                  <img class="new-products__photo" src="img/content/decaf-flat--phone.png"
+                    srcset="img/content/decaf-flat--phone@2x.png 2x" width="280" height="280" alt="Алюминиевая баночка с полосатой этикеткой в кофейных тонах.">
+                </picture>
               </li>
               <li class="swiper-slide new-products__item new-products__item--2" id="slide-2">
                 <h3 class="new-products__caption">Лавандовый Латте</h3>
@@ -77,6 +92,21 @@
                   <div class="new-products__price">265</div>
                   <button class="button new-products__button">Заказать</button>
                 </div>
+                <picture class="new-products__picture">
+                  <source type="image/webp" media="(min-width: 900px)"
+                    srcset="img/content/lavender--laptop.webp 1x, img/content/lavender--laptop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 500px)"
+                    srcset="img/content/lavender--tablet.webp 1x, img/content/lavender--tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/lavender--phone.webp 1x, img/content/lavender--phone@2x.webp 2x">
+
+                  <source media="(min-width: 900px)"
+                    srcset="img/content/lavender--laptop.png 1x, img/content/lavender--laptop@2x.png 2x">
+                  <source media="(min-width: 500px)"
+                    srcset="img/content/lavender--tablet.png 1x, img/content/lavender--tablet@2x.png 2x">
+                  <img class="new-products__photo" src="img/content/lavender--phone.png"
+                    srcset="img/content/lavender--phone@2x.png 2x" width="280" height="280" alt="Алюминиевая баночка с полосатой этикеткой в кофейных тонах.">
+                </picture>
               </li>
               <li class="swiper-slide new-products__item new-products__item--3" id="slide-3">
                 <h3 class="new-products__caption">Тройной Эспрессо</h3>
@@ -86,6 +116,21 @@
                   <div class="new-products__price">275</div>
                   <button class="button new-products__button">Заказать</button>
                 </div>
+                <picture class="new-products__picture">
+                  <source type="image/webp" media="(min-width: 900px)"
+                    srcset="img/content/espresso--laptop.webp 1x, img/content/espresso--laptop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 500px)"
+                    srcset="img/content/espresso--tablet.webp 1x, img/content/espresso--tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/espresso--phone.webp 1x, img/content/espresso--phone@2x.webp 2x">
+
+                  <source media="(min-width: 900px)"
+                    srcset="img/content/espresso--laptop.png 1x, img/content/espresso--laptop@2x.png 2x">
+                  <source media="(min-width: 500px)"
+                    srcset="img/content/espresso--tablet.png 1x, img/content/espresso--tablet@2x.png 2x">
+                  <img class="new-products__photo" src="img/content/espresso--phone.png"
+                    srcset="img/content/espresso--phone@2x.png 2x" width="280" height="280" alt="Алюминиевая баночка с полосатой этикеткой в кофейных тонах.">
+                </picture>
               </li>
             </ul>
             <div class="swiper-pagination"></div>
@@ -188,7 +233,7 @@
             </form>
           </section>
           <section class="products">
-           <h3 class="visually-hidden">Товары</h3>
+            <h3 class="visually-hidden">Товары</h3>
             <ul class="list products__list section">
               <li class="products__item">
                 <a class="products__link section__h3" href="blank.html" target="_blank">
@@ -222,7 +267,7 @@
           </section>
         </section>
         <section class="map" id="map">
-          <h2 class="visually-hidden">Карта</h2>
+          <h2 class="visually-hidden">Карта: Санкт-Петербург, набережная реки Карповки, дом 5.</h2>
         </section>
       </main>
       <footer class="page-footer section">
@@ -308,8 +353,7 @@
     </div>
     <script src="./js/swipper.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <!--<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>

@@ -24,13 +24,9 @@ const mainPinMarker = L.marker(
     lng: 30.31748,
   },
   {
-    draggable: true,
     icon: mainPinIcon,
   },
 );
 
 mainPinMarker.addTo(map);
-
-mainPinMarker.on('moveend', (evt) => {
-  console.log(evt.target.getLatLng());
-});
+;

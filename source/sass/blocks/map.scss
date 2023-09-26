@@ -2,14 +2,19 @@
   height: 420px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--mobile.jpg");
+  background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--phone.jpg");
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--mobile@2x.jpg");
+    background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--phone@2x.jpg");
   }
 
   @media (min-width: $phablet-width) {
     height: 450px;
+    background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--phablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--phablet@2x.jpg");
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -23,11 +28,6 @@
 
   @media (min-width: $laptop-width) {
     height: 510px;
-    background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--laptop.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/icon/map-marker.svg"), url("../../img/background/map--laptop@2x.jpg");
-    }
   }
 
   @media (min-width: $desktop-width) {

@@ -26,6 +26,7 @@
   font-weight: bold;
   line-height: 48px;
   letter-spacing: 0.02em;
+
   &::before {
     content: "Новинка!";
     display: block;
@@ -62,4 +63,8 @@
 .new-products__old-price::after,
 .new-products__price::after {
   content: "\20BD";
+}
+
+.new-products__picture {
+  order: -1;
 }
