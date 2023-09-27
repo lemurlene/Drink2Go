@@ -186,14 +186,16 @@
                     <label for="min-price" class="min-price">
                       от <input type="number" name="min-price" id="min-price" placeholder="0" value="0">
                     </label>
-                    <label class="hide-show__hide-since-tablet" for="max-price--1" class="max-price">
+                    <label class="hide-show__hide-since-tablet" for="max-price--1" class="max-price--1">
                       до <input type="number" name="max-price--1" id="max-price--1" placeholder="123" value="123">
                     </label>
-                    <label class="hide-show__show-since-tablet" for="max-price--2" class="max-price">
+                    <label class="hide-show__show-since-tablet" for="max-price--2" class="max-price--2">
                       до <input type="number" name="max-price--2" id="max-price--2" placeholder="900" value="900">
-                      <!--Уточнить у дизайнера: на мобильном должно быть "123"?
+                      <!--
+                        Уточнить у дизайнера: на мобильном должно быть "123"?
                         Если нет, удалить max-price--1 и max-price--2 использовать код ниже:
-                         <input type="number" name="max-price" id="max-price" placeholder="900" value="900">-->
+                         input type="number" name="max-price" id="max-price" placeholder="900" value="900"
+                      -->
                     </label>
                   </div>
                 </div>
@@ -242,10 +244,96 @@
           </section>
           <section class="products">
             <h3 class="visually-hidden">Товары</h3>
-            <ul class="list products__list section">
+            <ul class="list products__list">
               <li class="products__item">
                 <a class="products__link section__h3" href="blank.html" target="_blank">
-                  <img src="" width="" height="" alt="">
+                  <picture class="products__picture">
+                    <source type="image/webp"
+                      srcset="img/content/Variant1.webp 1x, img/content/Variant1@2x.webp 2x" width="130" height="188">
+                    <img class="products__photo" src="img/content/Variant1.png"
+                      srcset="img/content/Variant1@2x.png 2x" width="130" height="188" alt="Алюминиевая баночка с полосатой этикеткой в светло-бежевых тонах.">
+                  </picture>
+                  Декаф Флэт Уайт
+                </a>
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                <div class="products__buy">
+                  <div class="products__price">225</div>
+                  <button class="button products__button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a class="products__link section__h3" href="blank.html" target="_blank">
+                  <picture class="products__picture">
+                    <source type="image/webp"
+                      srcset="img/content/Variant2.webp 1x, img/content/Variant2@2x.webp 2x" width="130" height="188">
+                    <img class="products__photo" src="img/content/Variant2.png"
+                      srcset="img/content/Variant2@2x.png 2x" width="130" height="188" alt="Алюминиевая баночка с полосатой этикеткой в лавандовых тонах.">
+                  </picture>
+                  Декаф Флэт Уайт
+                </a>
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                <div class="products__buy">
+                  <div class="products__price">225</div>
+                  <button class="button products__button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a class="products__link section__h3" href="blank.html" target="_blank">
+                  <picture class="products__picture">
+                    <source type="image/webp"
+                      srcset="img/content/Variant3.webp 1x, img/content/Variant3@2x.webp 2x" width="130" height="188">
+                    <img class="products__photo" src="img/content/Variant3.png"
+                      srcset="img/content/Variant3@2x.png 2x" width="130" height="188" alt="Алюминиевая баночка с чёрной этикеткой в тёмно-серых полосках.">
+                  </picture>
+                  Декаф Флэт Уайт
+                </a>
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                <div class="products__buy">
+                  <div class="products__price">225</div>
+                  <button class="button products__button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a class="products__link section__h3" href="blank.html" target="_blank">
+                  <picture class="products__picture">
+                    <source type="image/webp"
+                      srcset="img/content/Variant4.webp 1x, img/content/Variant4@2x.webp 2x" width="130" height="188">
+                    <img class="products__photo" src="img/content/Variant4.png"
+                      srcset="img/content/Variant4@2x.png 2x" width="130" height="188" alt="Алюминиевая баночка с полосатой этикеткой в розовых тонах.">
+                  </picture>
+                  Декаф Флэт Уайт
+                </a>
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                <div class="products__buy">
+                  <div class="products__price">225</div>
+                  <button class="button products__button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a class="products__link section__h3" href="blank.html" target="_blank">
+                  <picture class="products__picture">
+                    <source type="image/webp"
+                      srcset="img/content/Variant5.webp 1x, img/content/Variant5@2x.webp 2x" width="130" height="188">
+                    <img class="products__photo" src="img/content/Variant5.png"
+                      srcset="img/content/Variant5@2x.png 2x" width="130" height="188" alt="Алюминиевая баночка с полосатой этикеткой в корчнево-бежевых тонах.">
+                  </picture>
+                  Декаф Флэт Уайт
+                </a>
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                <div class="products__buy">
+                  <div class="products__price">225</div>
+                  <button class="button products__button">В корзину</button>
+                </div>
+              </li>
+
+              <li class="products__item">
+                <a class="products__link section__h3" href="blank.html" target="_blank">
+                  <picture class="products__picture">
+                    <source type="image/webp"
+                      srcset="img/content/Variant6.webp 1x, img/content/Variant6@2x.webp 2x" width="130" height="188">
+                    <img class="products__photo" src="img/content/Variant6.png"
+                      srcset="img/content/Variant6@2x.png 2x" width="130" height="188" alt="Алюминиевая баночка с полосатой этикеткой в жёлто-бежевых тонах.">
+                  </picture>
                   Декаф Флэт Уайт
                 </a>
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
