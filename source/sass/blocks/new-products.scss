@@ -11,6 +11,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
+    padding: 20px 80px;
   }
 
   @media (min-width: $laptop-width) {
@@ -36,6 +37,7 @@
   font-weight: bold;
   line-height: 48px;
   letter-spacing: 0.02em;
+  margin: 0 0 10px 0;
 
   &::before {
     content: "Новинка!";
@@ -80,12 +82,25 @@
 }
 
 .new-products__text {
+  flex-basis: 50%;
+
   @media (min-width: $laptop-width) {
-    width: 50vw;
+    flex-basis: 50%;
     text-align: left;
   }
 }
 
 .new-products__picture {
+  flex-basis: 50%;
   order: -1;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    z-index: 1;
+  }
+
+  @media (min-width: $laptop-width) {
+    order: -1;
+    flex-basis: 50%;
+  }
 }
