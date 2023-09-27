@@ -1,3 +1,11 @@
+.logo {
+  display: block;
+
+  &--disabled {
+    pointer-events: none;
+  }
+}
+
 .logo::before,
 .logo::after {
   text-transform: uppercase;
