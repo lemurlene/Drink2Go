@@ -1,6 +1,6 @@
 .main-nav {
-  width: 100%;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-nav__toggle {
@@ -37,7 +37,7 @@
 
 @media (max-width: $mobile-width) {
   .main-nav--closed {
-    .main-nav__list {
+    .main-nav__list--site {
       display: none;
     }
 
@@ -49,18 +49,23 @@
   }
 
   .main-nav--js {
-    position: absolute;
+    .main-nav__list--site {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      z-index: 2;
+      width: 100%;
+      background-color: $white;
+      flex-direction: column;
+    }
   }
 }
 
 .main-nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
+  display: flex;
+  flex-wrap: wrap;
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 

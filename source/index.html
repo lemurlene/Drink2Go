@@ -19,16 +19,16 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="page-header">
-        <nav class="navigation page-header__nav main-nav">
-          <a class="logo page-header__logo page-header__logo--disabled" href="" aria-current="page">
-            <svg class="page-header__logo-img" width="32" height="36" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-          <button class="main-nav__toggle" type="button" aria-expanded="true" aria-controls="main-nav__list">
+        <a class="logo page-header__logo page-header__logo--disabled" href="" aria-current="page">
+          <svg class="page-header__logo-img" width="32" height="36" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="navigation main-nav">
+          <button class="main-nav__toggle" type="button" aria-expanded="true" aria-controls="list--site">
             <span class="visually-hidden main-nav__toggle-label">Открыть меню</span>
           </button>
-          <ul class="list navigation__list main-nav__list" id="main-nav__list">
+          <ul class="list navigation__list main-nav__list main-nav__list--site" id="list--site">
             <li class="main-nav__item main-nav__item--current">
               <a class="navigation__link main-nav__link main-nav__link--current" href="" aria-current="page">Главная</a>
             </li>
@@ -42,7 +42,7 @@
               <a class="navigation__link main-nav__link" href="form.html">О нас</a>
             </li>
           </ul>
-          <ul class="list navigation__list user-nav user-nav__list" id="user-nav__list">
+          <ul class="list navigation__list main-nav__list main-nav__list--user">
             <li class="user-nav__item user-nav__item--current">
               <a class="navigation__link user-nav__link user-nav__link--current">Войти</a>
             </li>
