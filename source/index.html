@@ -25,7 +25,7 @@
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <button class="main-nav__toggle main-nav__toggle--js" type="button" aria-expanded="true" aria-controls="main-nav__list">
+          <button class="main-nav__toggle" type="button" aria-expanded="true" aria-controls="main-nav__list">
             <span class="visually-hidden main-nav__toggle-label">Открыть меню</span>
           </button>
           <ul class="list navigation__list main-nav__list" id="main-nav__list">
@@ -42,9 +42,7 @@
               <a class="navigation__link main-nav__link" href="form.html">О нас</a>
             </li>
           </ul>
-        </nav>
-        <nav class="navigation page-header__nav user-nav">
-          <ul class="list navigation__list user-nav__list" id="user-nav__list">
+          <ul class="list navigation__list user-nav user-nav__list" id="user-nav__list">
             <li class="user-nav__item user-nav__item--current">
               <a class="navigation__link user-nav__link user-nav__link--current">Войти</a>
             </li>
@@ -153,15 +151,15 @@
               <h3 class="advantages__caption section__h3">Скорость</h3>
               Готовый напиток всегда под рукой — просто открой банку
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--convenience">
               <h3 class="advantages__caption section__h3">Удобство</h3>
               Легко помещается и в карман, и в маленькую сумочку
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--energy">
               <h3 class="advantages__caption section__h3">Бодрость</h3>
               Сбалансированная доза кофеина даст мощный заряд энергии
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--eco">
               <h3 class="advantages__caption section__h3">Экологичность</h3>
               Вся упаковка сделана из перерабатываемых материалов
             </li>
@@ -451,5 +449,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="./js/script.js" defer></script>
+    <script src="./js/main-nav.js" defer></script>
   </body>
 </html>
