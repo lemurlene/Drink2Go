@@ -1,9 +1,6 @@
 .logo {
-  display: block;
-
-  &--disabled {
-    pointer-events: none;
-  }
+  display: flex;
+  align-items: center;
 }
 
 .logo::before,
@@ -50,4 +47,8 @@
   @media (min-width: $tablet-width) {
     content: "Go";
   }
+}
+
+.logo--disabled {
+  pointer-events: none;
 }

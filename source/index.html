@@ -17,14 +17,14 @@
     <link rel="apple-touch-icon" href="img/favicon/32.png">
   </head>
   <body class="page__body">
-    <div class="page__wrapper">
+    <div class="page__wrapper hide-show">
       <header class="page-header">
-        <a class="logo page-header__logo page-header__logo--disabled" href="" aria-current="page">
-          <svg class="page-header__logo-img" width="32" height="36" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#logo"></use>
-          </svg>
-        </a>
         <nav class="navigation main-nav">
+          <a class="logo page-header__logo logo--disabled" href="" aria-current="page">
+            <svg class="page-header__logo-img" width="32" height="36" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
           <button class="main-nav__toggle" type="button" aria-expanded="true" aria-controls="list--site">
             <span class="visually-hidden main-nav__toggle-label">Открыть меню</span>
           </button>
@@ -42,12 +42,20 @@
               <a class="navigation__link main-nav__link" href="form.html">О нас</a>
             </li>
           </ul>
-          <ul class="list navigation__list main-nav__list main-nav__list--user">
-            <li class="user-nav__item user-nav__item--current">
-              <a class="navigation__link user-nav__link user-nav__link--current">Войти</a>
+          <ul class="list navigation__list main-nav__list user-nav">
+            <li class="user-nav__item">
+              <a class="navigation__link user-nav__link" href="" aria-label="Войти" data-user-link-name="Войти">
+                <svg class="user-nav__icon" width="16" height="16" aria-hidden="true" role="img">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg>
+              </a>
             </li>
             <li class="user-nav__item">
-              <a class="navigation__link user-nav__link" href="form.html">Корзина</a>
+              <a class="navigation__link user-nav__link" href="" aria-label="Корзина" data-user-link-name="Корзина">
+                <svg class="user-nav__icon" width="16" height="16" aria-hidden="true" role="img">
+                  <use xlink:href="img/sprite.svg#basket-navigation"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </nav>
@@ -56,7 +64,7 @@
         <h1 class="visually-hidden">Drink2Go: интернет-магазин по продаже кофейных напитков</h1>
         <section class="new-products">
           <h2 class="visually-hidden">Новинки</h2>
-          <div class="swiper hide-show">
+          <div class="swiper">
             <ul class="list swiper-wrapper new-products__list">
               <li class="swiper-slide new-products__item--1" id="slide-1">
                 <figure class="new-products__item">
@@ -180,7 +188,7 @@
                     <div class="toggle toggle-min" tabindex="0"></div>
                     <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
-                  <div class="price-controls hide-show">
+                  <div class="price-controls">
                     <label for="min-price" class="min-price">
                       от <input type="number" name="min-price" id="min-price" placeholder="0" value="0">
                     </label>
@@ -341,7 +349,7 @@
                 </div>
               </li>
             </ul>
-            <ul class="list pagination hide-show">
+            <ul class="list pagination">
               <li class="pagination__item">
                 <a href="#" class="pagination__link pagination__link--prev button"><span class="hide-show__show-since-tablet">Назад</span></a>
               </li>

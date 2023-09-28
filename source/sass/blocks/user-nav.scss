@@ -1,0 +1,15 @@
+.user-nav {
+  align-content: center;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 60px;
+  }
+}
+
+.user-nav__link {
+  @media (min-width: $laptop-width) {
+    &::after {
+      content: attr(data-user-link-name);
+    }
+  }
+}
