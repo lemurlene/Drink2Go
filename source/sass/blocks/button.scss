@@ -13,20 +13,38 @@
   word-break: break-word;
   min-height: 40px;
   padding: 8px 20px;
-}
 
-.button:hover {
+  &:hover {
   background-color: $lavender_300;
-}
+  }
 
-.button:active {
+  &:active,
+  :focus {
   background-color: $lavender_600;
+  }
 
-  .button__text {
-    opacity: 0.3;
+  &:disabled {
+  background-color: $grey_500;
   }
 }
 
-.button:disabled {
-  background-color: $grey_500;
+.button--light {
+  background-color: $white;
+  color: $lavender_500;
+
+  &:hover {
+    background-color: $lavender_300;
+    color:  $white;
+    }
+
+  &:active,
+  :focus {
+    background-color: $lavender_600;
+    color:  $white;
+    }
+
+  &:disabled {
+    background-color: $grey_400;
+    color:  $white;
+    }
 }

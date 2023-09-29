@@ -178,59 +178,57 @@
           <h2 class="block__h2 catalog__heading" data-heading-name="Каталог">Каталог кофейных напитков</h2>
           <section class="catalog__filters filters">
             <h3 class="visually-hidden">Фильтры</h3>
-            <form id="filters-form" class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="filter-item">
-                <legend class="caption-text">Цена</legend>
-                <div class="range-filter">
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div class="bar"></div>
+            <form id="filters-form" class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="filters__fieldset filters__fieldset--price fieldset">
+                <legend class="fieldset__title">Цена</legend>
+                <div class="range">
+                  <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0"></div>
-                    <div class="toggle toggle-max" tabindex="0"></div>
+                    <div class="range__toggle range__toggle--min" tabindex="0"></div>
+                    <div class="range__toggle range__toggle--max" tabindex="0"></div>
                   </div>
-                  <div class="price-controls">
-                    <label for="min-price" class="min-price">
-                      от <input type="number" name="min-price" id="min-price" placeholder="0" value="0">
+                  <div class="range__price-controls">
+                    <label class="visually-hidden for="min-price"">
+                      от <input class="range__price-input" type="number" name="min-price" id="min-price" placeholder="0" value="0">
                     </label>
-                    <label for="max-price" class="max-price">
-                      до <input type="number" name="max-price" id="max-price" placeholder="123" value="123">
+                    <label class="visually-hidden for="max-price">
+                      до <input class="range__price-input" type="number" name="max-price" id="max-price" placeholder="123" value="123">
                     </label>
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="filter-item">
-                <legend class="caption-text">Наличие молока</legend>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="not-important" checked value="Неважно">
-                <label for="not-important">Неважно</label>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="animal" disabled value="Только животное">
-                <label for="animal">Только животное</label>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="vegetable" value="Только растительное">
-                <label for="vegetable">Только растительное</label>
-                <input class="visually-hidden filters-grid" type="radio" name="filters-form-grid" id="no-milk" value="Без молока">
-                <label for="no-milk">Без молока</label>
+              <fieldset class="filters__fieldset">
+                <legend class="fieldset__title">Наличие молока</legend>
+                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="not-important" checked value="Неважно">
+                <label class="fieldset__label" for="not-important">Неважно</label>
+                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="animal" disabled value="Только животное">
+                <label class="fieldset__label" for="animal">Только животное</label>
+                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="vegetable" value="Только растительное">
+                <label class="fieldset__label" for="vegetable">Только растительное</label>
+                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="no-milk" value="Без молока">
+                <label class="fieldset__label" for="no-milk">Без молока</label>
               </fieldset>
-              <fieldset class="filter-item">
-                <legend class="caption-text">Страна произрастания</legend>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Brazil" checked value="Бразилия">
-                <label for="Brazil">Бразилия</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Ethiopia" disabled value="Эфиопия">
-                <label for="Ethiopia">Эфиопия</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Colombia" checked value="Колумбия">
-                <label for="Colombia">Колумбия</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Costa-Rica" value="Коста-Рика">
-                <label for="Costa-Rica">Коста-Рика</label>
-                <input class="visually-hidden filters-form-features" type="checkbox" name="filters-form-features" id="Peru" value="Перу">
-                <label for="Peru">Перу</label>
+              <fieldset class="filters__fieldset">
+                <legend class="fieldset__title">Страна произрастания</legend>
+                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Brazil" checked value="Бразилия">
+                <label class="fieldset__label" for="Brazil">Бразилия</label>
+                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Ethiopia" disabled value="Эфиопия">
+                <label class="fieldset__label" for="Ethiopia">Эфиопия</label>
+                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Colombia" checked value="Колумбия">
+                <label class="fieldset__label" for="Colombia">Колумбия</label>
+                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Costa-Rica" value="Коста-Рика">
+                <label class="fieldset__label" for="Costa-Rica">Коста-Рика</label>
+                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Peru" value="Перу">
+                <label class="fieldset__label" for="Peru">Перу</label>
               </fieldset>
-              <button type="submit" class="button">Применить</button>
-              <button type="reset" class="button">Сбросить</button>
+              <button type="submit" class="button filters__button">Применить</button>
+              <button type="reset" class="button filters__button button--light">Сбросить</button>
             </form>
           </section>
           <section class="catalog__sorting sorting">
             <h3 class="visually-hidden">Сортировка</h3>
-              <!--Стилизация select остаётся на усмотрение студента,
-                можно оставить стандартную стилизацию браузера.-->
             <form class="sorting-products fieldset">
               <label class="fieldset__title" for="sorting-products">Сортировка:</label>
               <select name="sorting-products" id="sorting-products">

@@ -1,0 +1,16 @@
+.filters__form {
+  display: grid;
+  row-gap: 30px;
+}
+
+.filters__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  position: relative;
+}
+
+.filters__button {
+  max-width: 280px;
+}
+
