@@ -14,12 +14,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
-    padding: 20px 80px;
+    padding: 60px 80px;
+    box-shadow: 0px -188px 0px -5px rgb(255, 255, 255) inset;
   }
 
   @media (min-width: $laptop-width) {
     flex-direction: row;
     gap: 30px;
+    box-shadow: none;
   }
 }
 
@@ -50,6 +52,11 @@
     letter-spacing: 0.04em;
     color: $lavender_500;
     text-transform: uppercase;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
   }
 }
 
@@ -97,6 +104,8 @@
 }
 
 .new-products__picture {
+  display: flex;
+  justify-content: center;
   order: -1;
 
   @media (min-width: $tablet-width) {
@@ -107,5 +116,20 @@
   @media (min-width: $laptop-width) {
     order: -1;
     flex-basis: 50%;
+  }
+}
+
+.new-products__photo {
+  max-width: 280px;
+  max-height: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 476px;
+    max-height: 476px;
+  }
+
+  @media (min-width: $laptop-width) {
+    max-width: 600px;
+    max-height: 600px;
   }
 }

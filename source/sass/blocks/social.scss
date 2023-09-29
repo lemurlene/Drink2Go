@@ -1,0 +1,36 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social__link {
+  width: 46px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $lavender_100;
+    .social__icon {
+      fill: $lavender_500;
+    }
+  }
+
+  &:active {
+    background-color: rgba($lavender_500, 0.25);
+    .social__icon {
+      fill: $lavender_500;
+    }
+  }
+}
+
+.social__icon {
+  background-position: center;
+
+    &:active {
+    opacity: 0.3;
+  }
+}

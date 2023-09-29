@@ -3,18 +3,23 @@
 }
 
 .advantages__item {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 52px;
-    height: 56px;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translate(-50%,-100%);
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      transform: translate(-125%,-25%);
-    }
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  width: 52px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%,-100%);
+
+  @media (min-width: $tablet-width) {
+    transform: translate(-125%,-25%);
   }
 }
 
