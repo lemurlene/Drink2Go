@@ -172,8 +172,8 @@
           </ul>
         </section>
         <section class="block__wrapper catalog" id="catalog">
-          <h2 class="block__h2" data-heading-name="Каталог">Каталог кофейных напитков</h2>
-          <section class="filters">
+          <h2 class="block__h2 catalog__heading" data-heading-name="Каталог">Каталог кофейных напитков</h2>
+          <section class="catalog__filters filters">
             <h3 class="visually-hidden">Фильтры</h3>
             <form id="filters-form" class="filters-form" action="https://echo.htmlacademy.ru" method="get">
               <fieldset class="filter-item">
@@ -190,16 +190,8 @@
                     <label for="min-price" class="min-price">
                       от <input type="number" name="min-price" id="min-price" placeholder="0" value="0">
                     </label>
-                    <label class="hide-show__hide-since-tablet" for="max-price-phone" class="max-price-phone">
-                      до <input type="number" name="max-price-phone" id="max-price-phone" placeholder="123" value="123">
-                    </label>
-                    <label class="hide-show__show-since-tablet" for="max-price-tablet" class="max-price-tablet">
-                      до <input type="number" name="max-price-tablet" id="max-price-tablet" placeholder="900" value="900">
-                      <!--
-                        Уточнить у дизайнера: на мобильном должно быть "123"?
-                        Если нет, удалить max-price--1 и max-price--2 использовать код ниже:
-                         input type="number" name="max-price" id="max-price" placeholder="900" value="900"
-                      -->
+                    <label for="max-price" class="max-price">
+                      до <input type="number" name="max-price" id="max-price" placeholder="123" value="123">
                     </label>
                   </div>
                 </div>
@@ -232,7 +224,7 @@
               <button type="reset" class="button">Сбросить</button>
             </form>
           </section>
-          <section class="sorting">
+          <section class="catalog__sorting sorting">
             <h3 class="visually-hidden">Сортировка</h3>
               <!--Стилизация select остаётся на усмотрение студента,
                 можно оставить стандартную стилизацию браузера.-->
@@ -246,7 +238,7 @@
               </select>
             </form>
           </section>
-          <section class="products">
+          <section class="catalog__products products">
             <h3 class="visually-hidden">Товары</h3>
             <ul class="block__list products__list">
               <li class="products__item">
@@ -379,21 +371,21 @@
           </a>
           <ul class="block__list social page-footer__social">
             <li class="social__item">
-              <a class="social__link" href="https://www.twitter.com" aria-label="Вконтакте">
+              <a class="social__link" href="https://www.twitter.com" target="_blank" aria-label="Вконтакте">
                 <svg class="social__icon" width="20" height="20" aria-hidden="true" role="img">
                   <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://ru.pinterest.com/" aria-label="Пинтерест">
+              <a class="social__link" href="https://ru.pinterest.com/" target="_blank" aria-label="Пинтерест">
                 <svg class="social__icon" width="22" height="22" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#pinterest"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.youtube.com/@HTMLAcademyRUS" aria-label="Одноклассники">
+              <a class="social__link" href="https://www.youtube.com/@HTMLAcademyRUS" target="_blank" aria-label="Одноклассники">
                 <svg class="social__icon" width="20" height="20" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#ok"></use>
                 </svg>
@@ -441,7 +433,7 @@
           <dd class="block__list">
             <ul class="block__list">
               <li class="contacts__item contacts__item--address block__micro-flex" >
-                <span>Санкт-Петербург, набережная реки Карповки, дом 5</span>
+                <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315900%2C59.968464&mode=routes&rtext=~59.968137%2C30.316272&rtt=pd&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L_QvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%2C%2C&z=16.2" target="_blank">Санкт-Петербург, набережная реки Карповки, дом 5</a>
               </li>
               <li class="contacts__item contacts__item--phone block__micro-flex" >
                 <a href="tel:+79999999999">+7 (999) 999-99-99</a>
@@ -450,7 +442,7 @@
           </dd>
         </dl>
         <p class="page-footer__copyright copyright">Разработано в&nbsp;
-          <a class="copyright__link block__micro-flex" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link block__micro-flex" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
             HTML Academy
             <svg class="copyright__icon" width="12" height="16" aria-label="html-academy">
               <use xlink:href="img/sprite.svg#html-academy"></use>

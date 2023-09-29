@@ -5,11 +5,13 @@
     height: 16px;
     background-repeat: no-repeat;
     background-position: center;
+    flex-shrink: 0;
   }
 }
 
 .contacts__item--address::before {
   background-image: url("../../img/icon/location.svg");
+  align-items: start;
 }
 
 .contacts__item--phone::before {

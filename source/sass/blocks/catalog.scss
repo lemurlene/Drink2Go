@@ -1,4 +1,44 @@
 .catalog {
   background-color: $grey_100;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $laptop-width) {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "heading heading heading heading"
+    "filters . . sorting"
+    "filters products products products"
+  }
+}
+
+.catalog__heading {
+  @media (min-width: $laptop-width) {
+    grid-area: heading;
+  }
+}
+
+.catalog__filters {
+  @media (min-width: $laptop-width) {
+    grid-area: filters;
+  }
+}
+
+.catalog__sorting {
+  @media (min-width: $laptop-width) {
+    grid-area: sorting;
+  }
+}
+
+.catalog__products {
+  @media (min-width: $laptop-width) {
+    grid-area: products;
+  }
 }
