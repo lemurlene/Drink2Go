@@ -8,8 +8,6 @@
 
 .user-nav__link {
   @media (min-width: $laptop-width) {
-    display: flex;
-    align-items: center;
     gap: 8px;
     &::after {
       content: attr(data-user-link-name);

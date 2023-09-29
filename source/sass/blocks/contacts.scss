@@ -1,0 +1,18 @@
+.contacts__item {
+  &::after {
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.contacts__item--address::after {
+  background-image: url("../../img/icon/location.svg");
+}
+
+.contacts__item--phone::after {
+  background-image: url("../../img/icon/phone.svg");
+}
+

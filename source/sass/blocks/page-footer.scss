@@ -1,3 +1,22 @@
 .page-footer {
   display: grid;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 40px;
+  }
+}
+
+.page-footer__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__links {
+  display: flex;
+  justify-content: space-between;
 }
