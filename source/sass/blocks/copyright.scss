@@ -1,7 +1,30 @@
 .copyright {
   color: $grey_500;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .copyright__link {
   color: $grey_500;
+
+  &:hover {
+    color: $lavender_500;
+    .copyright__icon {
+      fill: $lavender_500;
+    }
+  }
+
+  &:active {
+    color: $lavender_600;
+    .copyright__icon {
+      fill: $lavender_600;
+    }
+  }
+}
+
+.copyright__icon {
+  fill: $grey_500;
 }

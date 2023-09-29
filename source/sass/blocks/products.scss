@@ -2,12 +2,15 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    justify-items: flex-start;
+
   }
 
   @media (min-width: $laptop-width) {
@@ -20,6 +23,7 @@
   flex-direction: column;
   background-color: $white;
   padding: 20px;
+  max-width: 390px;
 
   @media (min-width: $tablet-width) {
     padding: 30px;

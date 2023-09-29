@@ -1,5 +1,5 @@
 .contacts__item {
-  &::after {
+  &::before {
     content: "";
     width: 13px;
     height: 16px;
@@ -8,11 +8,10 @@
   }
 }
 
-.contacts__item--address::after {
+.contacts__item--address::before {
   background-image: url("../../img/icon/location.svg");
 }
 
-.contacts__item--phone::after {
+.contacts__item--phone::before {
   background-image: url("../../img/icon/phone.svg");
 }
-
