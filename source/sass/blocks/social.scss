@@ -6,11 +6,13 @@
 }
 
 .social__link {
-  width: 46px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $grey_500;
 
   &:hover {
     background-color: $lavender_100;
@@ -29,8 +31,5 @@
 
 .social__icon {
   background-position: center;
-
-    &:active {
-    opacity: 0.3;
-  }
+  fill: $grey_500;
 }

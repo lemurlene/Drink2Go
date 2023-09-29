@@ -94,12 +94,17 @@
 .new-products__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-basis: 50%;
+  max-width: 480px;
+
+  @media (min-width: $tablet-width) {
+   max-width: 610px;
+  }
 
   @media (min-width: $laptop-width) {
     flex-basis: 50%;
     text-align: left;
+    max-width: 625px;
   }
 }
 
