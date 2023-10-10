@@ -7,12 +7,15 @@
   font-size: 16px;
   line-height: 24px;
   border: none;
-  color: $white;
-  background-color: $lavender_500;
   cursor: pointer;
   word-break: break-word;
   min-height: 40px;
   padding: 8px 20px;
+}
+
+  .button--main-color {
+    color: $white;
+    background-color: $lavender_500;
 
   &:hover {
   background-color: $lavender_300;
@@ -28,9 +31,9 @@
   }
 }
 
-.button--light {
-  background-color: $white;
+.button--second-color {
   color: $lavender_500;
+  background-color: $white;
 
   &:hover {
     background-color: $lavender_300;

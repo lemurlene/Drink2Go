@@ -76,7 +76,7 @@
                   <div class="new-products__buy">
                     <p class="new-products__old-price">295</p>
                     <p class="new-products__price">225</p>
-                    <button class="button new-products__button">Заказать</button>
+                    <button class="button button--main-color new-products__button">Заказать</button>
                   </div>
                 </div>
                 <picture class="new-products__picture">
@@ -102,7 +102,7 @@
                   <div class="new-products__buy">
                     <div class="new-products__old-price">285</div>
                     <div class="new-products__price">265</div>
-                    <button class="button new-products__button">Заказать</button>
+                    <button class="button button--main-color new-products__button">Заказать</button>
                   </div>
                 </div>
                 <picture class="new-products__picture">
@@ -128,7 +128,7 @@
                   <div class="new-products__buy">
                     <div class="new-products__old-price">395</div>
                     <div class="new-products__price">275</div>
-                    <button class="button new-products__button">Заказать</button>
+                    <button class="button button--main-color new-products__button">Заказать</button>
                   </div>
                 </div>
                 <picture class="new-products__picture">
@@ -184,47 +184,45 @@
                 <div class="range">
                   <div class="range__controls">
                     <div class="range__scale">
-                      <div class="range__bar"></div>
+                      <div class="range__bar" style="width: 85%; margin-left: 1%"></div>
                     </div>
-                    <div class="range__toggle range__toggle--min" tabindex="0"></div>
-                    <div class="range__toggle range__toggle--max" tabindex="0"></div>
+                    <div class="range__toggle range__toggle--min" tabindex="0" style="left: 1%"></div>
+                    <div class="range__toggle range__toggle--max" tabindex="0" style="left: 75%"></div>
                   </div>
                   <div class="range__price-controls">
-                    <label class="visually-hidden" for="min-price">
-                      от <input class="range__price-input" type="number" name="min-price" id="min-price" placeholder="0" value="0">
-                    </label>
-                    <label class="visually-hidden" for="max-price">
-                      до <input class="range__price-input" type="number" name="max-price" id="max-price" placeholder="123" value="123">
-                    </label>
+                    <label class="visually-hidden" for="min-price">от</label>
+                    <input class="range__price-input" type="number" name="min-price" id="min-price" placeholder="0" value="0">
+                    <div class="range__price__between"></div>
+                    <label class="visually-hidden" for="max-price">до</label>
+                    <input class="range__price-input" type="number" name="max-price" id="max-price" placeholder="123" value="123">
                   </div>
-                </div>
               </fieldset>
               <fieldset class="filters__fieldset">
                 <legend class="fieldset__title">Наличие молока</legend>
-                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="not-important" checked value="Неважно">
                 <label class="fieldset__label" for="not-important">Неважно</label>
-                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="animal" disabled value="Только животное">
+                <input class="fieldset__input" type="radio" name="filters-form-grid" id="not-important" checked value="Неважно">
                 <label class="fieldset__label" for="animal">Только животное</label>
-                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="vegetable" value="Только растительное">
+                <input class="fieldset__input" type="radio" name="filters-form-grid" id="animal" disabled value="Только животное">
                 <label class="fieldset__label" for="vegetable">Только растительное</label>
-                <input class="visually-hidden fieldset__input" type="radio" name="filters-form-grid" id="no-milk" value="Без молока">
+                <input class="fieldset__input" type="radio" name="filters-form-grid" id="vegetable" value="Только растительное">
                 <label class="fieldset__label" for="no-milk">Без молока</label>
+                <input class="fieldset__input" type="radio" name="filters-form-grid" id="no-milk" value="Без молока">
               </fieldset>
               <fieldset class="filters__fieldset">
                 <legend class="fieldset__title">Страна произрастания</legend>
-                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Brazil" checked value="Бразилия">
                 <label class="fieldset__label" for="Brazil">Бразилия</label>
-                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Ethiopia" disabled value="Эфиопия">
+                <input class="fieldset__input" type="checkbox" name="filters-form-features" id="Brazil" checked value="Бразилия">
                 <label class="fieldset__label" for="Ethiopia">Эфиопия</label>
-                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Colombia" checked value="Колумбия">
+                <input class="fieldset__input" type="checkbox" name="filters-form-features" id="Ethiopia" disabled value="Эфиопия">
                 <label class="fieldset__label" for="Colombia">Колумбия</label>
-                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Costa-Rica" value="Коста-Рика">
+                <input class="fieldset__input" type="checkbox" name="filters-form-features" id="Colombia" checked value="Колумбия">
                 <label class="fieldset__label" for="Costa-Rica">Коста-Рика</label>
-                <input class="visually-hidden fieldset__input" type="checkbox" name="filters-form-features" id="Peru" value="Перу">
+                <input class="fieldset__input" type="checkbox" name="filters-form-features" id="Costa-Rica" value="Коста-Рика">
                 <label class="fieldset__label" for="Peru">Перу</label>
+                <input class="fieldset__input" type="checkbox" name="filters-form-features" id="Peru" value="Перу">
               </fieldset>
-              <button type="submit" class="button filters__button">Применить</button>
-              <button type="reset" class="button filters__button button--light">Сбросить</button>
+              <button type="submit" class="button button--main-color filters__button">Применить</button>
+              <button type="reset" class="button button--second-color filters__button">Сбросить</button>
             </form>
           </section>
           <section class="catalog__sorting sorting">
@@ -255,7 +253,7 @@
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
                 <div class="products__buy">
                   <div class="products__price">225</div>
-                  <button class="button products__button">В корзину</button>
+                  <button class="button button--main-color products__button">В корзину</button>
                 </div>
               </li>
               <li class="products__item">
@@ -271,7 +269,7 @@
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
                 <div class="products__buy">
                   <div class="products__price">225</div>
-                  <button class="button products__button">В корзину</button>
+                  <button class="button button--main-color products__button">В корзину</button>
                 </div>
               </li>
               <li class="products__item">
@@ -287,7 +285,7 @@
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
                 <div class="products__buy">
                   <div class="products__price">225</div>
-                  <button class="button products__button">В корзину</button>
+                  <button class="button button--main-color products__button">В корзину</button>
                 </div>
               </li>
               <li class="products__item">
@@ -303,7 +301,7 @@
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
                 <div class="products__buy">
                   <div class="products__price">225</div>
-                  <button class="button products__button">В корзину</button>
+                  <button class="button button--main-color products__button">В корзину</button>
                 </div>
               </li>
               <li class="products__item">
@@ -319,7 +317,7 @@
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
                 <div class="products__buy">
                   <div class="products__price">225</div>
-                  <button class="button products__button">В корзину</button>
+                  <button class="button button--main-color products__button">В корзину</button>
                 </div>
               </li>
 
@@ -336,7 +334,7 @@
                 Кофе без кофеина из Эфиопии с натуральным фермерским молоком
                 <div class="products__buy">
                   <div class="products__price">225</div>
-                  <button class="button products__button">В корзину</button>
+                  <button class="button button--main-color products__button">В корзину</button>
                 </div>
               </li>
             </ul>
@@ -345,16 +343,16 @@
                 <a href="#" class="pagination__link pagination__link--prev button"><span class="hide-show__show-since-tablet">Назад</span></a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link button pagination__link--current">1</a>
+                <a class="pagination__link button--second-color button pagination__link--current">1</a>
               </li>
               <li class="pagination__item">
-                <a href="#" class="pagination__link button">2</a>
+                <a href="#" class="pagination__link button--second-color button">2</a>
               </li>
               <li class="pagination__item">
-                <a href="#" class="pagination__link button">3</a>
+                <a href="#" class="pagination__link button--second-color button">3</a>
               </li>
               <li class="pagination__item">
-                <a href="#" class="pagination__link pagination__link--next button"><span class="hide-show__show-since-tablet">Вперёд</span></a>
+                <a href="#" class="pagination__link button--second-color pagination__link--next button"><span class="hide-show__show-since-tablet">Вперёд</span></a>
               </li>
             </ul>
           </section>
